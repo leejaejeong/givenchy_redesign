@@ -1,5 +1,42 @@
-.main_visual video{
+/* !===== main visual ===== */
+section.main_visual video{
     width: 100%;
     height: 100vh;
     object-fit: cover;
+}
+
+
+
+
+/* !===== collection ===== */
+section.collection{
+    margin: 200px 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+section.collection .wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+section.collection .wrap div{
+    position: relative;
+}
+
+section.collection .wrap div img{
+    width: 100%;
+}
+
+section.collection .wrap div a{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    font-size: 26px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    font-family: 'Pretendard-Regular';
+    color: #fff;
 }

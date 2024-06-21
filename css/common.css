@@ -1,3 +1,18 @@
+/* !===== font ===== */
+@font-face {
+    font-family: "MrEavesXLMod";
+    font-weight: 100;
+    src: url("font/MrEavesXLModOT-Bold.woff") format("woff");
+  }
+  @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* !===== header ===== */
 header{
     position: fixed;
     top:0;
@@ -34,4 +49,15 @@ header .logo_box{
 header .logo_box img {
     min-width: 334px;
     width: 100%;
+}
+
+.header_container.fix{
+    background-color: #222;
+}
+
+.header_container.fix .logo_box{
+    max-width: 500px;
+    width: 100%;
+    opacity: 0.8;
+    transition: 0.5s;
 }
