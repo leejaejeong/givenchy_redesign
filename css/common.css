@@ -1,5 +1,8 @@
 header{
-    background-color: black;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
     padding: 50px 40px 20px 40px;
     box-sizing: border-box;
 }
@@ -14,14 +17,17 @@ header nav ul {
 header nav ul li a{
     min-width: 20px;
 }
+
 header nav ul li a img{
     width: 100%;
+    opacity: 0.8;
 }
 
 header .logo_box{
     max-width: 930px;
     width: 100%;
     margin: 0 auto;
+    opacity: 0.8;
 }
 
 header .logo_box img {
