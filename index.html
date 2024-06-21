@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
     <header class="header_container">
@@ -61,7 +64,84 @@
         </div>
     </section>
 
+    <!-- ! What’s New -->
+    <section class="sec whats_new">
+        <div class="txt_btn_wrap">
+            <div class="txt_box">
+                <h2>What’s New</h2>
+                <p>Lorem ipsum dolor sit amet, <br>
+                    consectetuer adipiscing elit.</p>
+            </div>
+            <div class="btn_box">
+                <div class="swiper-button-next btn_next">
+                    <img src="img/swiper_arrow_next.svg" alt="">
+                </div>
+                <div class="swiper-button-prev btn_prev">
+                    <img src="img/swiper_arrow_prev.svg" alt="">
+                </div>
+                <div class="swiper-pagination pagination"></div>
+            </div>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper whats_new_swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/givenchy_new_img01.png" alt="Voyou 가죽 휴대폰 케이스">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/givenchy_new_img02.png" alt="G-Tote 4G 테리 코튼 미디엄 토트백">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/givenchy_new_img03.png" alt="Voyou 워싱 데님 자수 장식 파우치">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/givenchy_new_img04.png" alt="G-Trek 울 메신저백">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/givenchy_new_img05.png" alt="실크 프린트 박시 셔츠">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/givenchy_new_img06.png" alt="G-Trail 나일론 백">
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".whats_new_swiper", {
+            slidesPerView: 2.8,
+            slidesPerGroup: 2,
+            spaceBetween: 50,
+            loop: true,
+            speed : 1000,
+
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 
     <script src="js/main.js"></script>
 </body>

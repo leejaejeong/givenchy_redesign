@@ -2,7 +2,7 @@
 @font-face {
     font-family: "MrEavesXLMod";
     font-weight: 100;
-    src: url("font/MrEavesXLModOT-Bold.woff") format("woff");
+    src: url("../font/MrEavesXLModOT-Bold.woff") format("woff");
   }
   @font-face {
     font-family: 'Pretendard-Regular';
