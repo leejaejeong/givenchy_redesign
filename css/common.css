@@ -1,0 +1,30 @@
+header{
+    background-color: black;
+    padding: 50px 40px 20px 40px;
+    box-sizing: border-box;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap:30px;
+}
+
+header nav ul li a{
+    min-width: 20px;
+}
+header nav ul li a img{
+    width: 100%;
+}
+
+header .logo_box{
+    max-width: 930px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .logo_box img {
+    min-width: 334px;
+    width: 100%;
+}
