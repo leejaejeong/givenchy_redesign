@@ -1,3 +1,7 @@
+h2, p{
+    color: #222;
+}
+
 /* !===== main visual ===== */
 section.main_visual video{
     width: 100%;
@@ -59,13 +63,13 @@ section.whats_new .txt_btn_wrap{
 }
 
 
-section.whats_new .txt_btn_wrap .txt_box h2{
+section.whats_new .txt_btn_wrap .tit_box h2{
     margin: 0 0 20px 0;
     font-size: 64px;
     font-family: "MrEavesXLMod";
 }
 
-section.whats_new .txt_btn_wrap .txt_box p{
+section.whats_new .txt_btn_wrap .tit_box p{
     font-size: 32px;
     line-height: 1.3;
 }
@@ -112,7 +116,7 @@ section.gift{
     margin: 200px 0;
 }
 
-section.gift .txt_box{
+section.gift .tit_box{
     display: flex;
     align-items: center;
     gap:50px;
@@ -120,13 +124,13 @@ section.gift .txt_box{
     box-sizing: border-box;
 }
 
-section.gift .txt_box h2{
+section.gift .tit_box h2{
     margin: 0 0 20px 0;
     font-size: 64px;
     font-family: "MrEavesXLMod";
 }
 
-section.gift .txt_box p{
+section.gift .tit_box p{
     font-size: 32px;
     line-height: 1.3;
     padding: 0 0 15px 0;
@@ -182,4 +186,44 @@ section.gift .marquee .txt_img_box span{
 @keyframes marquee {
     0% { left: 0; }
     100% { left: -100%; }
+}
+
+
+
+/* !===== product ===== */
+section.product{
+    margin: 200px 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+section.product .tit_box .txt_box{
+    margin: 0 0 62px 0;
+}
+
+section.product .tit_box .txt_box h2{
+    font-size: 64px;
+    font-family: "MrEavesXLMod";
+}
+
+section.product .tit_box .txt_box a{
+    font-size: 24px;
+    line-height: 1.3;
+    font-family: 'Pretendard-Regular';
+}
+
+section.product ul{
+    display: flex;
+    align-items: center;
+    gap:20px;
+    margin: 0 0 30px 0;
+}
+
+section.product ul > li {
+    max-width: 455px;
+    width: 100%;
+}
+
+section.product ul > li img{
+    width: 100%;
 }
