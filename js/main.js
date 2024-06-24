@@ -7,4 +7,5 @@ $(window).scroll(function(){
     }else if($(window).scrollTop() >= header_offset){
         $('.header_container').addClass('fix');
     }
+    return false;
 })
