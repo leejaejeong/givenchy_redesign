@@ -66,7 +66,7 @@ section.whats_new .txt_btn_wrap{
 section.whats_new .txt_btn_wrap .tit_box h2{
     margin: 0 0 20px 0;
     font-size: 64px;
-    font-family: "MrEavesXLMod";
+    font-family: "MrEavesXLMod-B";
 }
 
 section.whats_new .txt_btn_wrap .tit_box p{
@@ -127,7 +127,7 @@ section.gift .tit_box{
 section.gift .tit_box h2{
     margin: 0 0 20px 0;
     font-size: 64px;
-    font-family: "MrEavesXLMod";
+    font-family: "MrEavesXLMod-B";
 }
 
 section.gift .tit_box p{
@@ -178,7 +178,7 @@ section.gift .marquee .txt_img_box span{
     font-weight: normal;
     text-decoration: underline;
     text-underline-offset:5px;
-    font-family: "MrEavesXLMod";
+    font-family: "MrEavesXLMod-B";
     color: #fff;
     z-index: 10;
 }
@@ -203,7 +203,7 @@ section.product .tit_box .txt_box{
 
 section.product .tit_box .txt_box h2{
     font-size: 64px;
-    font-family: "MrEavesXLMod";
+    font-family: "MrEavesXLMod-B";
 }
 
 section.product .tit_box .txt_box a{
