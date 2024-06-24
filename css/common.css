@@ -51,6 +51,121 @@ header .logo_box img {
 
 
 
+
+/* !===== side nav ===== */
+section.side_nav{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 50px 40px;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #222;
+    color: #fff;
+    z-index: 999;
+}
+
+section.side_nav .logo_ico_box {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 100px 0;
+}
+
+section.side_nav .logo_ico_box .logo {
+    max-width: 500px;
+    width: 100%;
+}
+
+section.side_nav .logo_ico_box .logo img{
+    width: 100%;
+}
+
+section.side_nav .logo_ico_box .close{
+    max-width: 30px;
+    width: 100%;
+    cursor: pointer;
+}
+
+section.side_nav .logo_ico_box .close img {
+    width: 100%;
+}
+
+section.side_nav .img_nav_box{
+    display: flex;
+    margin: 0 0 60px 0;
+}
+
+section.side_nav .img_nav_box .collection_img{
+    flex: 1;
+}
+
+section.side_nav .img_nav_box .collection_img .img_box{
+    max-width: 300px;
+    width: 100%;
+}
+
+section.side_nav .img_nav_box .collection_img .img_box img{
+    width: 100%;
+}
+
+section.side_nav .img_nav_box .nav{
+    flex: 1;
+}
+
+section.side_nav .img_nav_box .nav .wrap{
+    max-width: 367px;
+    width: 100%;
+}
+
+section.side_nav .img_nav_box .nav .wrap .nav_box{
+    margin: 0 0 120px 0;
+}
+
+section.side_nav .img_nav_box .nav .wrap .nav_box > li{
+    margin: 0 0 30px 0;
+    
+}
+
+section.side_nav .img_nav_box .nav .wrap .nav_box li > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(256, 256, 256, 0.2);
+    cursor: pointer;
+}
+
+section.side_nav .img_nav_box .nav .wrap .nav_box ul{
+    display: none;
+}
+
+section.side_nav .img_nav_box .nav .wrap .nav_box li > div > a{
+    font-size: 46px;
+    font-family: "MrEavesXLMod-B";
+}
+
+section.side_nav .img_nav_box .nav .wrap .signin_contact_box li{
+    margin: 0 0 15px 0;
+    font-size: 30px;
+    font-family: "MrEavesXLMod-B";
+}
+
+section.side_nav .sns a{
+    max-width: 30px;
+    width: 100%;
+    padding: 0 20px 0 0;
+}
+
+section.side_nav .sns a img{
+    width: 100%;
+}
+
+
+
+
+
+
 /* !===== footer ===== */
 footer{
     margin: 200px 0 0 0 ;
@@ -178,12 +293,12 @@ footer .info .wrap .sns a.img_box img{
     width: 100%;
 }
 
-footer .footer_logo{
+footer .footer_logo_box{
     max-width: 1080px;
     width: 100%;
     margin: 0 auto;
 }
 
-footer .footer_logo img{
+footer .footer_logo_box img{
     width: 100%;
 }
