@@ -19,6 +19,11 @@
     <!-- ! header -->
     <header class="header_container">
         <nav class="gnb">
+            <div class="logo_box">
+                <a href="#">
+                    <img src="img/givenchy_logo_text_white.png" alt="지방시">
+                </a>
+            </div>
             <ul>
                 <li>
                     <a href="#">
@@ -42,15 +47,10 @@
                 </li>
             </ul>
         </nav>
-        <div class="logo_box">
-            <a href="#">
-                <img src="img/givenchy_logo_text_white.png" alt="지방시">
-            </a>
-        </div>
     </header>
 
     <!-- ! side nav -->
-    <section class="sec side_nav">
+    <section class="sec side_nav_sec">
         <div class="logo_ico_box">
             <div class="img_box logo">
                 <img src="img/givenchy_menu_logo_white.svg" alt="지방시">
@@ -205,7 +205,7 @@
                 </div>
             </div>
         </div>
-        <div class="sns">
+        <div class="side_nav_sns">
             <a href="#" class="img_box">
                 <img src="img/givenchy_sns_facebook.png" alt="페이스북">
             </a>
@@ -224,26 +224,30 @@
 
 
     <!-- ! main visual -->
-    <section class="sec main_visual">
+    <section class="sec main_visual_sec">
         <video src="media/givenchy_video_Givenchy_Plage_2024_pc.mp4" autoplay muted loop playsinline></video>
     </section>
 
     <!-- ! collection -->
-    <section class="sec collection">
+    <section class="sec collection_sec">
         <div class="wrap">
             <div>
-                <img src="img/givenchy_collection_img01.png" alt="봄-여름 2024 여성 캠페인">
+                <div class="img_box">
+                    <img src="img/givenchy_collection_img01.png" alt="봄-여름 2024 여성 캠페인">
+                </div>
                 <a href="#">봄-여름 2024 여성 캠페인 ↗</a>
             </div>
             <div>
-                <img src="img/givenchy_collection_img02.png" alt="Fall 2024 컬렉션">
+                <div class="img_box">
+                    <img src="img/givenchy_collection_img02.png" alt="Fall 2024 컬렉션">
+                </div>
                 <a href="#">Fall 2024 컬렉션↗</a>
             </div>
         </div>
     </section>
 
     <!-- ! What’s New -->
-    <section class="sec whats_new">
+    <section class="sec whats_new_sec">
         <div class="txt_btn_wrap">
             <div class="tit_box">
                 <h2>What’s New</h2>
@@ -305,7 +309,7 @@
     <script>
         var swiper = new Swiper(".whats_new_swiper", {
             slidesPerView: 2.8,
-            slidesPerGroup: 2,
+            slidesPerGroup: 1,
             spaceBetween: 50,
             loop: true,
             speed: 1000,
@@ -322,7 +326,7 @@
     </script>
 
     <!-- ! gift -->
-    <section class="sec gift">
+    <section class="sec gift_sec">
         <div class="tit_box">
             <h2>Gifts</h2>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
@@ -331,67 +335,97 @@
             <ul class="marquee">
                 <li class="txt_img_box voyou">
                     <span>Voyou</span>
-                    <img src="img/givenchy_gift_img01.png" alt="부아유">
+                    <div class="img_box">
+                        <img src="img/givenchy_gift_img01.png" alt="부아유">
+                    </div>
                 </li>
                 <li class="txt_img_box shark_lock">
                     <span>Shark Lock</span>
-                    <img src="img/givenchy_gift_img02.png" alt="샤크락">
+                    <div class="img_box">
+                        <img src="img/givenchy_gift_img02.png" alt="샤크락">
+                    </div>
                 </li>
                 <li class="txt_img_box sunglasses">
                     <span>Sunglasses</span>
-                    <img src="img/givenchy_gift_img03.png" alt="선글라스">
+                    <div class="img_box">
+                        <img src="img/givenchy_gift_img03.png" alt="선글라스">
+                    </div>
                 </li>
                 <li class="txt_img_box bags">
                     <span>Bags</span>
-                    <img src="img/givenchy_gift_img04.png" alt="가방">
+                    <div class="img_box">
+                        <img src="img/givenchy_gift_img04.png" alt="가방">
+                    </div>
                 </li>
                 <li class="txt_img_box jewelry">
                     <span>Jewelry</span>
-                    <img src="img/givenchy_gift_img05.png" alt="주얼리">
+                    <div class="img_box">
+                        <img src="img/givenchy_gift_img05.png" alt="주얼리">
+                    </div>
                 </li>
             </ul>
             <ul class="marquee">
                 <li class="txt_img_box voyou">
                     <span>Voyou</span>
-                    <img src="img/givenchy_gift_img01.png" alt="부아유">
+                    <div class="img_box">
+                        <img src="img/givenchy_gift_img01.png" alt="부아유">
+                    </div>
                 </li>
                 <li class="txt_img_box shark_lock">
                     <span>Shark Lock</span>
-                    <img src="img/givenchy_gift_img02.png" alt="샤크락">
+                    <div class="img_box">
+                        <img src="img/givenchy_gift_img02.png" alt="샤크락">
+                    </div>
                 </li>
                 <li class="txt_img_box sunglasses">
                     <span>Sunglasses</span>
-                    <img src="img/givenchy_gift_img03.png" alt="선글라스">
+                    <div class="img_box">
+                        <img src="img/givenchy_gift_img03.png" alt="선글라스">
+                    </div>
                 </li>
                 <li class="txt_img_box bags">
                     <span>Bags</span>
-                    <img src="img/givenchy_gift_img04.png" alt="가방">
+                    <div class="img_box">
+                        <img src="img/givenchy_gift_img04.png" alt="가방">
+                    </div>
                 </li>
                 <li class="txt_img_box jewelry">
                     <span>Jewelry</span>
-                    <img src="img/givenchy_gift_img05.png" alt="주얼리">
+                    <div class="img_box">
+                        <img src="img/givenchy_gift_img05.png" alt="주얼리">
+                    </div>
                 </li>
             </ul>
             <ul class="marquee">
                 <li class="txt_img_box voyou">
                     <span>Voyou</span>
-                    <img src="img/givenchy_gift_img01.png" alt="부아유">
+                    <div class="img_box">
+                        <img src="img/givenchy_gift_img01.png" alt="부아유">
+                    </div>
                 </li>
                 <li class="txt_img_box shark_lock">
                     <span>Shark Lock</span>
-                    <img src="img/givenchy_gift_img02.png" alt="샤크락">
+                    <div class="img_box">
+                        <img src="img/givenchy_gift_img02.png" alt="샤크락">
+                    </div>
                 </li>
                 <li class="txt_img_box sunglasses">
                     <span>Sunglasses</span>
-                    <img src="img/givenchy_gift_img03.png" alt="선글라스">
+                    <div class="img_box">
+                        <img src="img/givenchy_gift_img03.png" alt="선글라스">
+                    </div>
                 </li>
                 <li class="txt_img_box bags">
                     <span>Bags</span>
-                    <img src="img/givenchy_gift_img04.png" alt="가방">
+                    <div class="img_box">
+                        <img src="img/givenchy_gift_img04.png" alt="가방">
+                    </div>
                 </li>
                 <li class="txt_img_box jewelry">
                     <span>Jewelry</span>
-                    <img src="img/givenchy_gift_img05.png" alt="주얼리">
+                    <div class="img_box">
+                        <img src="img/givenchy_gift_img05.png" alt="주얼리">
+                    </div>
                 </li>
             </ul>
         </div>
@@ -399,7 +433,7 @@
 
 
     <!-- ! gift pop up -->
-    <section class="popup voyou">
+    <section class="sec popup_sec voyou_popup">
         <div class="container">
             <div class="close_btn">
                 <img src="img/givenchy_popup_ico_x.png" alt="닫기">
@@ -426,7 +460,7 @@
             </div>
         </div>
     </section>
-    <section class="popup shark_lock">
+    <section class="sec popup_sec shark_lock_popup">
         <div class="container">
             <div class="close_btn">
                 <img src="img/givenchy_popup_ico_x.png" alt="닫기">
@@ -451,7 +485,7 @@
             </div>
         </div>
     </section>
-    <section class="popup sunglasses">
+    <section class="sec popup_sec sunglasses_popup">
         <div class="container">
             <div class="close_btn">
                 <img src="img/givenchy_popup_ico_x.png" alt="닫기">
@@ -478,7 +512,7 @@
             </div>
         </div>
     </section>
-    <section class="popup bags">
+    <section class="sec popup_sec bags_popup">
         <div class="container">
             <div class="close_btn">
                 <img src="img/givenchy_popup_ico_x.png" alt="닫기">
@@ -505,7 +539,7 @@
             </div>
         </div>
     </section>
-    <section class="popup jewelry">
+    <section class="sec popup_sec jewelry_popup">
         <div class="container">
             <div class="close_btn">
                 <img src="img/givenchy_popup_ico_x.png" alt="닫기">
@@ -534,7 +568,7 @@
     <!-- ! product -->
     <section class="sec product">
         <div class="wrap">
-            <ul class="bags">
+            <ul class="bags_wrap">
                 <li class="tit_box">
                     <div class="txt_box">
                         <h2>Bags<br>
@@ -555,7 +589,7 @@
                     <img src="img/givenchy_bags_img03.png" alt="플로럴 패턴 가죽 미니 안티고나 백">
                 </li>
             </ul>
-            <ul class="sunglasses">
+            <ul class="sunglasses_wrap">
                 <li>
                     <img src="img/givenchy_sunglasses_img01.png" alt="Giv Cut 메탈 유니섹스 선글라스">
                 </li>
@@ -678,7 +712,7 @@
                     <p>호스팅 서비스: 세일즈포스</p>
                     <p>NHN KCP 구매안전 서비스에 가입하여 고객님의 안전한 거래를 보장하고 있습니다.</p>
                 </div>
-                <div class="sns">
+                <div class="footer_sns">
                     <a href="#" class="img_box">
                         <img src="img/givenchy_sns_facebook.png" alt="페이스북">
                     </a>

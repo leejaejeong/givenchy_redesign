@@ -10,15 +10,15 @@ $(window).scroll(function(){
     return false;
 })
 
-$('.side_nav').hide();
+$('.side_nav_sec').hide();
 
 $('.menu_btn').click(function(){
-    $('.side_nav').fadeIn(400);
+    $('.side_nav_sec').fadeIn(400);
     $('body').addClass('stop_scroll');
 })
 
-$('.side_nav .close_btn').click(function(){
-    $('.side_nav').fadeOut(400);
+$('.side_nav_sec .close_btn').click(function(){
+    $('.side_nav_sec').fadeOut(400);
     $('body').removeClass('stop_scroll');
 })
 
@@ -38,33 +38,33 @@ $('.category_box').click(function(){
 })
 
 
-$('.popup').hide();
+$('.popup_sec').hide();
 
 $('.marquee > .voyou').click(function(){
-    $('.popup.voyou').fadeIn(400);
+    $('.voyou_popup').fadeIn(400);
 })
 $('.marquee > .shark_lock').click(function(){
-    $('.popup.shark_lock').fadeIn(400);
+    $('.shark_lock_popup').fadeIn(400);
 })
 $('.marquee > .sunglasses').click(function(){
-    $('.popup.sunglasses').fadeIn(400);
+    $('.sunglasses_popup').fadeIn(400);
 })
 $('.marquee > .bags').click(function(){
-    $('.popup.bags').fadeIn(400);
+    $('.bags_popup').fadeIn(400);
 })
 $('.marquee > .jewelry').click(function(){
-    $('.popup.jewelry').fadeIn(400);
+    $('.jewelry_popup').fadeIn(400);
 })
 
 
 
-$('.popup .close_btn').click(function(){
-    $('.popup').fadeOut(400);
+$('.popup_sec .close_btn').click(function(){
+    $('.popup_sec').fadeOut(400);
 })
 
 $(document).mouseup(function(e){
-    var popUp = $('.popup > .container')
+    var popUp = $('.popup_sec > .container')
     if(popUp.has(e.target).length === 0 ){
-        $('.popup').fadeOut(400); 
+        $('.popup_sec').fadeOut(400); 
     }
 })

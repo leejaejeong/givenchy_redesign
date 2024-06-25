@@ -38,6 +38,7 @@ header .logo_box{
     max-width: 930px;
     margin: 0 auto;
     opacity: 0.8;
+    transition: 0.5s;
 }
 
 header .logo_box img {
@@ -66,14 +67,14 @@ header .logo_box img {
 
 .header_container.fix .logo_box img{
     width: 100%;
-    opacity: 0.8;
+    opacity: 1;
 }
 
 
 
 
 /* !===== side nav ===== */
-section.side_nav{
+.side_nav_sec{
     position: fixed;
     top:0;
     left: 0;
@@ -87,68 +88,68 @@ section.side_nav{
     z-index: 999;
 }
 
-section.side_nav .logo_ico_box {
+.side_nav_sec .logo_ico_box {
     display: flex;
     justify-content: space-between;
     margin: 0 0 100px 0;
 }
 
-section.side_nav .logo_ico_box .logo {
+.side_nav_sec .logo_ico_box .logo {
     max-width: 500px;
     width: 100%;
 }
 
-section.side_nav .logo_ico_box .logo img{
+.side_nav_sec .logo_ico_box .logo img{
     width: 100%;
 }
 
-section.side_nav .logo_ico_box .close_btn{
+.side_nav_sec .logo_ico_box .close_btn{
     max-width: 25px;
     width: 100%;
     cursor: pointer;
 }
 
-section.side_nav .logo_ico_box .close_btn img {
+.side_nav_sec .logo_ico_box .close_btn img {
     width: 100%;
 }
 
-section.side_nav .img_nav_box{
+.side_nav_sec .img_nav_box{
     display: flex;
     margin: 0 0 60px 0;
 }
 
-section.side_nav .img_nav_box .collection_img{
+.side_nav_sec .img_nav_box .collection_img{
     flex: 1;
 }
 
-section.side_nav .img_nav_box .collection_img .img_box{
+.side_nav_sec .img_nav_box .collection_img .img_box{
     max-width: 300px;
     width: 100%;
 }
 
-section.side_nav .img_nav_box .collection_img .img_box img{
+.side_nav_sec .img_nav_box .collection_img .img_box img{
     width: 100%;
 }
 
-section.side_nav .img_nav_box .nav{
+.side_nav_sec .img_nav_box .nav{
     flex: 1;
 }
 
-section.side_nav .img_nav_box .nav .wrap{
+.side_nav_sec .img_nav_box .nav .wrap{
     max-width: 367px;
     width: 100%;
 }
 
-section.side_nav .img_nav_box .nav .wrap .nav_box{
+.side_nav_sec .img_nav_box .nav .wrap .nav_box{
     margin: 0 0 120px 0;
 }
 
-section.side_nav .img_nav_box .nav .wrap .nav_box > li{
+.side_nav_sec .img_nav_box .nav .wrap .nav_box > li{
     margin: 0 0 30px 0;
     
 }
 
-section.side_nav .img_nav_box .nav .wrap .nav_box li > .category_box{
+.side_nav_sec .img_nav_box .nav .wrap .nav_box li > .category_box{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -156,26 +157,33 @@ section.side_nav .img_nav_box .nav .wrap .nav_box li > .category_box{
     cursor: pointer;
 }
 
-section.side_nav .img_nav_box .nav .wrap .nav_box li > .category_box > div.rotate{
+.side_nav_sec .img_nav_box .nav .wrap .nav_box li > .category_box > a{
+    font-size: 46px;
+    font-family: "MrEavesXLMod-B";
+    color: #fff;
+}
+
+.side_nav_sec .img_nav_box .nav .wrap .nav_box li > .category_box > div.rotate{
     transform: rotate(180deg);
     transition: 0.5s;
 }
 
-section.side_nav .img_nav_box .nav .wrap .nav_box li > .category_box > a{
-    font-size: 46px;
-    font-family: "MrEavesXLMod-B";
-}
-
-section.side_nav .img_nav_box .nav .wrap .nav_box .sub_category{
+.side_nav_sec .img_nav_box .nav .wrap .nav_box .sub_category{
     display: none;
     padding: 10px;
 }
 
-section.side_nav .img_nav_box .nav .wrap .nav_box .sub_category li{
+.side_nav_sec .img_nav_box .nav .wrap .nav_box .sub_category li{
     padding:5px 0;
 }
 
-section.side_nav .img_nav_box .nav .wrap .nav_box .sub_category li a::after{
+.side_nav_sec .img_nav_box .nav .wrap .nav_box .sub_category li a{
+    font-size: 16px;
+    font-family: 'Pretendard-Light';
+    color: #fff;
+}
+
+.side_nav_sec .img_nav_box .nav .wrap .nav_box .sub_category li a::after{
     padding: 5px 0 0 0 ;
     display:block;
     content: '';
@@ -185,17 +193,18 @@ section.side_nav .img_nav_box .nav .wrap .nav_box .sub_category li a::after{
     transform-origin:  0% 50%;
 }
 
-section.side_nav .img_nav_box .nav .wrap .nav_box .sub_category li a:hover::after{
+.side_nav_sec .img_nav_box .nav .wrap .nav_box .sub_category li a:hover::after{
     transform: scaleX(1); 
 }
 
-section.side_nav .img_nav_box .nav .wrap .signin_contact_box li{
+.side_nav_sec .img_nav_box .nav .wrap .signin_contact_box li{
     margin: 0 0 15px 0;
     font-size: 30px;
     font-family: "MrEavesXLMod-B";
+    color: #fff;
 }
 
-section.side_nav .img_nav_box .nav .wrap .signin_contact_box li a::after{
+.side_nav_sec .img_nav_box .nav .wrap .signin_contact_box li a::after{
     padding: 5px 0 0 0 ;
     display:block;
     content: '';
@@ -205,17 +214,17 @@ section.side_nav .img_nav_box .nav .wrap .signin_contact_box li a::after{
     transform-origin:  0% 50%;
 }
 
-section.side_nav .img_nav_box .nav .wrap .signin_contact_box li a:hover::after{
+.side_nav_sec .img_nav_box .nav .wrap .signin_contact_box li a:hover::after{
     transform: scaleX(1); 
 }
 
-section.side_nav .sns a{
+.side_nav_sec .side_nav_sns a{
     max-width: 25px;
     width: 100%;
     padding: 0 20px 0 0;
 }
 
-section.side_nav .sns a img{
+.side_nav_sec .side_nav_sns a img{
     width: 100%;
 }
 
@@ -258,6 +267,7 @@ footer .news_letter .wrap .img_box img{
 footer .news_letter .wrap h3{
     margin: 0 0 50px 0;
     font-size: 34px;
+    color: #fff;
 }
 
 footer .news_letter .wrap .input{
@@ -269,12 +279,14 @@ footer .news_letter .wrap .input{
     margin: 0 auto;
     padding: 0 0 10px 0;
     border-bottom: 1px solid #fff;
+    color: #fff;
 }
 
 footer .news_letter .wrap .input > input,
 footer .news_letter .wrap .input > button{
     font-size: 18px;
     font-family: 'Pretendard-Regular';
+    color: #fff;
 }
 
 footer .news_letter .wrap .input > input{
@@ -304,17 +316,20 @@ footer .service .wrap{
 footer .service .wrap ul li.service_tit{
     margin: 0 0 20px 0;
     font-family: 'Pretendard-Medium';
+    color: #fff;
 }
 
 footer .service .wrap ul li:not(:first-child){
     margin: 0 0 15px 0;
     font-family: 'Pretendard-Light';
+    color: #fff;
 }
 
 footer .service .wrap ul.language select{
     width: 330px;
     padding: 0 0 10px 0;
     border-bottom: 1px solid #fff;
+    color: #fff;
     cursor: pointer;
 }
 
@@ -339,7 +354,7 @@ footer .info .wrap div > p{
     color: #fff;
 }
 
-footer .info .wrap .sns{
+footer .info .wrap .footer_sns{
     display: flex;
     justify-content: flex-end;
     gap:20px;

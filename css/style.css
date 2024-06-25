@@ -1,9 +1,5 @@
-h2, p{
-    color: #222;
-}
-
 /* !===== main visual ===== */
-section.main_visual video{
+.main_visual_sec video{
     width: 100%;
     height: 100vh;
     object-fit: cover;
@@ -13,13 +9,13 @@ section.main_visual video{
 
 
 /* !===== collection ===== */
-section.collection{
+.collection_sec{
     margin: 200px 0;
     padding: 0 20px;
     box-sizing: border-box;
 }
 
-section.collection .wrap{
+.collection_sec .wrap{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,15 +23,16 @@ section.collection .wrap{
     cursor: pointer;
 }
 
-section.collection .wrap div{
+.collection_sec .wrap > div{
     position: relative;
 }
 
-section.collection .wrap div img{
+.collection_sec .wrap > div > .img_box img{
     width: 100%;
+    object-fit: cover;
 }
 
-section.collection .wrap div a{
+.collection_sec .wrap > div a{
     position: absolute;
     bottom: 30px;
     left: 30px;
@@ -44,7 +41,7 @@ section.collection .wrap div a{
     color: #fff;
 }
 
-section.collection .wrap div a::after{
+.collection_sec .wrap > div a::after{
     display:block;
     content: '';
     border-bottom: 2px solid #fff;  
@@ -53,40 +50,40 @@ section.collection .wrap div a::after{
     transform-origin:  0% 50%;
 }
 
-section.collection .wrap div:hover a::after{
+.collection_sec .wrap > div:hover a::after{
     transform: scaleX(1); 
 }
 
 
 
 /* !===== what's new ===== */
-section.whats_new{
+.whats_new_sec{
     display: flex;
     justify-content: space-between;
-    gap:120px;
+    gap:110px;
     margin: 200px 0;
     padding: 0 0 0 20px;
     box-sizing: border-box;
 }
 
-section.whats_new .txt_btn_wrap{
+.whats_new_sec .txt_btn_wrap{
     position: relative;
     flex:1;
 }
 
-
-section.whats_new .txt_btn_wrap .tit_box h2{
+.whats_new_sec .txt_btn_wrap .tit_box h2{
     margin: 0 0 20px 0;
     font-size: 64px;
     font-family: "MrEavesXLMod-B";
 }
 
-section.whats_new .txt_btn_wrap .tit_box p{
+.whats_new_sec .txt_btn_wrap .tit_box p{
     font-size: 32px;
     line-height: 1.3;
+    font-family: 'Pretendard-Medium';
 }
 
-section.whats_new .txt_btn_wrap .btn_box{
+.whats_new_sec .txt_btn_wrap .btn_box{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -94,41 +91,51 @@ section.whats_new .txt_btn_wrap .btn_box{
     z-index: 99;
 }
 
-section.whats_new .txt_btn_wrap .btn_box .swiper-pagination{
+.whats_new_sec .txt_btn_wrap .btn_box .swiper-pagination{
     position: static;
-    bottom: 0;
     font-size: 24px;
     font-weight: normal;
     font-family: 'Pretendard-Regular';
 }
 
-section.whats_new .txt_btn_wrap .btn_box .swiper-button-next::after,
-section.whats_new .txt_btn_wrap .btn_box .swiper-button-prev::after{
+.whats_new_sec .txt_btn_wrap .btn_box .swiper-button-next::after,
+.whats_new_sec .txt_btn_wrap .btn_box .swiper-button-prev::after{
     display: none;
 }
 
-section.whats_new .txt_btn_wrap .btn_box .swiper-button-next,
-section.whats_new .txt_btn_wrap .btn_box .swiper-button-prev{
+.whats_new_sec .txt_btn_wrap .btn_box .swiper-button-next,
+.whats_new_sec .txt_btn_wrap .btn_box .swiper-button-prev{
     max-width: 14px;
 }
 
-section.whats_new .txt_btn_wrap .btn_box .swiper-button-next > img,
-section.whats_new .txt_btn_wrap .btn_box .swiper-button-prev > img{
+.whats_new_sec .txt_btn_wrap .btn_box .swiper-button-next > img,
+.whats_new_sec .txt_btn_wrap .btn_box .swiper-button-prev > img{
     width: 100%;
 }
 
-section.whats_new .whats_new_swiper{
+.whats_new_sec .whats_new_swiper{
     flex: 3;
 }
+
+.whats_new_sec .whats_new_swiper .swiper-slide{
+    max-width: 434px;
+    width: 100%;
+}
+
+.whats_new_sec .whats_new_swiper .swiper-slide img{
+    width: 100%;
+}
+
+
 
 
 
 /* !===== gift ===== */
-section.gift{
+.gift_sec{
     margin: 200px 0;
 }
 
-section.gift .tit_box{
+.gift_sec .tit_box{
     display: flex;
     align-items: center;
     gap:50px;
@@ -136,31 +143,32 @@ section.gift .tit_box{
     box-sizing: border-box;
 }
 
-section.gift .tit_box h2{
+.gift_sec .tit_box h2{
     margin: 0 0 20px 0;
     font-size: 64px;
     font-family: "MrEavesXLMod-B";
 }
 
-section.gift .tit_box p{
+.gift_sec .tit_box p{
+    padding: 0 0 15px 0;
     font-size: 32px;
     line-height: 1.3;
-    padding: 0 0 15px 0;
+    font-family: 'Pretendard-Medium';
 }
 
-section.gift .marquee_box{
+.gift_sec .marquee_box{
     display: flex;
     gap: 20px;
     overflow: hidden;
 }
 
-section.gift .marquee{
+.gift_sec .marquee{
     display: flex;
     justify-content: flex-start;
     gap:20px;
 }
 
-section.gift .marquee .txt_img_box{
+.gift_sec .marquee .txt_img_box{
     position: relative;
     width: 33%;
     min-width: 300px;
@@ -168,21 +176,21 @@ section.gift .marquee .txt_img_box{
     animation: marquee 40s linear infinite;
 }
 
-section.gift .marquee_box:hover .txt_img_box{
+.gift_sec .marquee_box:hover .txt_img_box{
     animation-play-state: paused;
 }
 
-section.gift .marquee .txt_img_box img{
+.gift_sec .marquee .txt_img_box img{
     width: 100%;
     filter: grayscale(100%);
     transition: 0.5s;
 }
 
-section.gift .marquee .txt_img_box:hover img{
+.gift_sec .marquee .txt_img_box:hover img{
     filter: none;
 }
 
-section.gift .marquee .txt_img_box span{
+.gift_sec .marquee .txt_img_box span{
     position: absolute;
     top: 15px;
     left: 15px;
@@ -193,7 +201,7 @@ section.gift .marquee .txt_img_box span{
     z-index: 10;
 }
 
-section.gift .marquee .txt_img_box span::after{
+.gift_sec .marquee .txt_img_box span::after{
     display:block;
     content: '';
     border-bottom: 2px solid #fff;  
@@ -202,7 +210,7 @@ section.gift .marquee .txt_img_box span::after{
     transform-origin:  0% 50%;
 }
 
-section.gift .marquee .txt_img_box:hover span::after{
+.gift_sec .marquee .txt_img_box:hover span::after{
     transform: scaleX(1); 
 }
 
@@ -212,7 +220,7 @@ section.gift .marquee .txt_img_box:hover span::after{
 }
 
 /* !===== gift pop up ===== */
-section.popup{
+.popup_sec{
     position: fixed;
     top:0;
     left: 0;
@@ -221,7 +229,7 @@ section.popup{
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 999;
 }
-section.popup .container{
+.popup_sec .container{
     position: absolute;
     top:50%;
     left: 50%;
@@ -233,18 +241,18 @@ section.popup .container{
     background-color: #fff;
 }
 
-section.popup .container .close_btn{
+.popup_sec .container .close_btn{
     width: 100%;
     text-align: right;
     cursor: pointer;
 }
 
-section.popup .container .close_btn img{
+.popup_sec .container .close_btn img{
     max-width: 25px;
     width: 100%;
 }
 
-section.popup .container .img_txt_box{
+.popup_sec .container .img_txt_box{
     display: flex;
     align-items: center;
     gap:46px;
@@ -252,22 +260,22 @@ section.popup .container .img_txt_box{
     box-sizing: border-box;
 }
 
-section.popup .container .img_txt_box .img_box{
+.popup_sec .container .img_txt_box .img_box{
     max-width: 460px;
     width: 100%;
 }
 
-section.popup .container .img_txt_box .img_box img{
+.popup_sec .container .img_txt_box .img_box img{
     width: 100%;
 }
 
-section.popup .container .img_txt_box .txt_btn_box h3{
+.popup_sec .container .img_txt_box .txt_btn_box h3{
     margin: 0 0 35px 0;
     font-size: 46px;
     font-family: "MrEavesXLMod-B";
 }
 
-section.popup .container .img_txt_box .txt_btn_box p{
+.popup_sec .container .img_txt_box .txt_btn_box p{
     margin: 0 0 20px 0;
     padding: 35px 0 0 0;
     box-sizing: border-box;
@@ -277,12 +285,12 @@ section.popup .container .img_txt_box .txt_btn_box p{
     font-family: 'Pretendard-Light';
 }
 
-section.popup .container .img_txt_box .txt_btn_box .btn_box{
+.popup_sec .container .img_txt_box .txt_btn_box .btn_box{
     position: relative;
     width: 100%;
 }
 
-section.popup .container .img_txt_box .txt_btn_box .btn_box button{
+.popup_sec .container .img_txt_box .txt_btn_box .btn_box button{
     position: absolute;
     top:0;
     right: 0;
@@ -294,7 +302,7 @@ section.popup .container .img_txt_box .txt_btn_box .btn_box button{
     cursor: pointer;
 }
 
-section.popup .container .img_txt_box .txt_btn_box .btn_box button::after{
+.popup_sec .container .img_txt_box .txt_btn_box .btn_box button::after{
     display:block;
     content: '';
     border-bottom: 1px solid #222;  
@@ -303,7 +311,7 @@ section.popup .container .img_txt_box .txt_btn_box .btn_box button::after{
     transform-origin:  0% 50%;
 }
 
-section.popup .container .img_txt_box .txt_btn_box .btn_box button:hover::after{
+.popup_sec .container .img_txt_box .txt_btn_box .btn_box button:hover::after{
     transform: scaleX(1); 
 }
 
@@ -356,6 +364,7 @@ section.product ul > li {
     width: 100%;
 }
 
-section.product ul > li img{
+section.product ul > li > img{
     width: 100%;
+    cursor: pointer;
 }
