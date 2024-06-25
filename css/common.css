@@ -1,3 +1,8 @@
+body.stop_scroll{
+    height: 100vh;
+    overflow: hidden;
+}
+
 /* !===== header ===== */
 header{
     position: fixed;
@@ -61,7 +66,7 @@ section.side_nav{
     height: 100vh;
     padding: 50px 40px;
     box-sizing: border-box;
-    box-sizing: border-box;
+    overflow: auto;
     background-color: #222;
     color: #fff;
     z-index: 999;
@@ -82,13 +87,13 @@ section.side_nav .logo_ico_box .logo img{
     width: 100%;
 }
 
-section.side_nav .logo_ico_box .close{
-    max-width: 30px;
+section.side_nav .logo_ico_box .close_btn{
+    max-width: 25px;
     width: 100%;
     cursor: pointer;
 }
 
-section.side_nav .logo_ico_box .close img {
+section.side_nav .logo_ico_box .close_btn img {
     width: 100%;
 }
 
@@ -128,7 +133,7 @@ section.side_nav .img_nav_box .nav .wrap .nav_box > li{
     
 }
 
-section.side_nav .img_nav_box .nav .wrap .nav_box li > div{
+section.side_nav .img_nav_box .nav .wrap .nav_box li > .category_box{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -136,13 +141,37 @@ section.side_nav .img_nav_box .nav .wrap .nav_box li > div{
     cursor: pointer;
 }
 
-section.side_nav .img_nav_box .nav .wrap .nav_box ul{
-    display: none;
+section.side_nav .img_nav_box .nav .wrap .nav_box li > .category_box > div.rotate{
+    transform: rotate(180deg);
+    transition: 0.5s;
 }
 
-section.side_nav .img_nav_box .nav .wrap .nav_box li > div > a{
+section.side_nav .img_nav_box .nav .wrap .nav_box li > .category_box > a{
     font-size: 46px;
     font-family: "MrEavesXLMod-B";
+}
+
+section.side_nav .img_nav_box .nav .wrap .nav_box .sub_category{
+    display: none;
+    padding: 10px;
+}
+
+section.side_nav .img_nav_box .nav .wrap .nav_box .sub_category li{
+    padding:5px 0;
+}
+
+section.side_nav .img_nav_box .nav .wrap .nav_box .sub_category li a::after{
+    padding: 5px 0 0 0 ;
+    display:block;
+    content: '';
+    border-bottom: 1px solid #fff;  
+    transform: scaleX(0); 
+    transition: transform 300ms ease-in-out;
+    transform-origin:  0% 50%;
+}
+
+section.side_nav .img_nav_box .nav .wrap .nav_box .sub_category li a:hover::after{
+    transform: scaleX(1); 
 }
 
 section.side_nav .img_nav_box .nav .wrap .signin_contact_box li{
@@ -151,8 +180,22 @@ section.side_nav .img_nav_box .nav .wrap .signin_contact_box li{
     font-family: "MrEavesXLMod-B";
 }
 
+section.side_nav .img_nav_box .nav .wrap .signin_contact_box li a::after{
+    padding: 5px 0 0 0 ;
+    display:block;
+    content: '';
+    border-bottom: 1px solid #fff;  
+    transform: scaleX(0); 
+    transition: transform 300ms ease-in-out;
+    transform-origin:  0% 50%;
+}
+
+section.side_nav .img_nav_box .nav .wrap .signin_contact_box li a:hover::after{
+    transform: scaleX(1); 
+}
+
 section.side_nav .sns a{
-    max-width: 30px;
+    max-width: 25px;
     width: 100%;
     padding: 0 20px 0 0;
 }

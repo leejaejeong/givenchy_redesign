@@ -9,3 +9,23 @@ $(window).scroll(function(){
     }
     return false;
 })
+
+$('.side_nav').hide();
+
+$('.category_box').click(function(){
+    $(this).siblings().slideToggle(500);
+    $(this).children('div').toggleClass('rotate');
+})
+
+$('.menu_btn').click(function(){
+    $('.side_nav').fadeIn(400);
+    $('body').addClass('stop_scroll');
+})
+
+$('.close_btn').click(function(){
+    $('.side_nav').fadeOut(400);
+    $('body').removeClass('stop_scroll');
+})
+
+
+$('.popup').hide();
