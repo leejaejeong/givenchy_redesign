@@ -31,8 +31,11 @@ header nav ul li a img{
 }
 
 header .logo_box{
+    position:absolute;
+    top:94px;
+    left: 50%;
+    transform: translateX(-50%);
     max-width: 930px;
-    width: 100%;
     margin: 0 auto;
     opacity: 0.8;
 }
@@ -44,15 +47,27 @@ header .logo_box img {
 
 .header_container.fix{
     background-color: #222;
-}
-
-.header_container.fix .logo_box{
-    max-width: 500px;
-    width: 100%;
-    opacity: 0.8;
     transition: 0.5s;
 }
 
+.header_container.fix .logo_box{
+    position:absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s;
+}
+
+.header_container.fix .logo_box a{
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header_container.fix .logo_box img{
+    width: 100%;
+    opacity: 0.8;
+}
 
 
 
@@ -246,6 +261,9 @@ footer .news_letter .wrap h3{
 }
 
 footer .news_letter .wrap .input{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
     max-width: 517px;
     width: 100%;
     margin: 0 auto;

@@ -55,10 +55,13 @@ a, span {
 }
 
 button{
+	display: block;
 	border: none;
 	outline: none;
 	background-color: transparent;
 	color: inherit;
+	padding: 0;
+	margin: 0;
 }
 
 input{
