@@ -1,3 +1,5 @@
+
+// ! header 고정
 $(window).scroll(function(){
     
     let header_offset = $('header').offset().top;
@@ -10,6 +12,8 @@ $(window).scroll(function(){
     return false;
 })
 
+
+// ! side menu
 $('.side_nav_sec').hide();
 
 $('.menu_btn').click(function(){
@@ -22,22 +26,21 @@ $('.side_nav_sec .close_btn').click(function(){
     $('body').removeClass('stop_scroll');
 })
 
-
-
 $('.category_box').click(function(){
     $('.sub_category').slideUp();
-    $('.category_box > div').removeClass('rotate');
+    $('.category_box > div').removeClass('flip_vertical');
     if($(this).siblings().hasClass('active')){
         $(this).siblings().removeClass('active');
-        $(this).children('div').removeClass('rotate');
+        $(this).children('div').removeClass('flip_vertical');
     } else {
         $(this).siblings().slideDown(500);    
         $(this).siblings().addClass('active');
-        $(this).children('div').addClass('rotate');
+        $(this).children('div').addClass('flip_vertical');
     }
 })
 
 
+// ! pop up
 $('.popup_sec').hide();
 
 $('.marquee > .txt_img_box').click(function(){
@@ -61,7 +64,6 @@ $('.marquee > .jewelry').click(function(){
 })
 
 
-
 $('.popup_sec .close_btn').click(function(){
     $('.popup_sec').fadeOut(400);
     $('body').removeClass('stop_scroll');
@@ -74,3 +76,34 @@ $(document).mouseup(function(e){
         $('body').removeClass('stop_scroll');
     }
 })
+
+
+// ! footer dropdown menu
+if($(window).width() <= 768){
+    $('footer .service > .wrap > div > ul').slideUp();
+    $('footer .service > .wrap > div:not(:last-child) > div').addClass('mobile_ver');
+}
+
+$(window).resize(function(){
+    if($(window).width() <= 768){
+        $('footer .service > .wrap > div > ul').slideUp();
+        
+    }else{
+        $('footer .service > .wrap > div > ul').slideDown();
+        $('footer .service > .wrap > div:not(:last-child) > div').removeClass('mobile_ver');
+    }
+})
+
+$('.footer_menu_category.mobile_ver').click(function(){
+    $('footer .service > .wrap > div > ul').slideUp();
+    $('.footer_menu_category > .img_box').removeClass('flip_vertical');
+    if($(this).siblings().hasClass('active')){
+        $(this).siblings().removeClass('active');
+        $(this).children('div').removeClass('flip_vertical');
+    } else {
+        $(this).siblings().slideDown(500);    
+        $(this).siblings().addClass('active');
+        $(this).children('div').addClass('flip_vertical');
+    }
+})
+

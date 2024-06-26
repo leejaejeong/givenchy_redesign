@@ -221,8 +221,8 @@ header.fix .logo_box img{
     width: 100%;
 }
 
-.side_nav_sec .img_nav_box .nav .wrap .nav_box li > .category_box > div.rotate{
-    transform: rotate(180deg);
+.side_nav_sec .img_nav_box .nav .wrap .nav_box li > .category_box > div.flip_vertical{
+    transform: scaleY(-1);
     transition: 0.5s;
 }
 
@@ -369,6 +369,10 @@ footer .news_letter .wrap h3{
     color: #fff;
 }
 
+footer .news_letter .wrap h3 > br{
+    display: none;
+}
+
 footer .news_letter .wrap .input{
     display: flex;
     justify-content: space-around;
@@ -412,31 +416,39 @@ footer .service .wrap{
     box-sizing: border-box;
 } 
 
-footer .service .wrap ul li.service_tit{
+footer .service .wrap > div{
+    flex: 1;
+}
+
+footer .service .wrap .footer_menu_category .img_box{
+    display: none;
+}
+
+footer .service .wrap .footer_menu_category h5{
     margin: 0 0 20px 0;
     font-family: 'Pretendard-Medium';
     color: #fff;
 }
 
-footer .service .wrap ul li:not(:first-child){
+footer .service .wrap > div > ul li{
     margin: 0 0 15px 0;
     font-family: 'Pretendard-Light';
     color: #fff;
 }
 
-footer .service .wrap ul.language select{
-    width: 330px;
+footer .service .wrap .language_change select{
+    width: 100%;
     padding: 0 0 10px 0;
     border-bottom: 1px solid #fff;
     color: #fff;
     cursor: pointer;
 }
 
-footer .service .wrap ul.language select option{
+footer .service .wrap .language_change select option{
     background-color: #222;
 }
 
-footer .info .wrap{
+footer .company_info .wrap{
     display: flex;
     justify-content: space-between;
     max-width: 1440px;
@@ -446,26 +458,27 @@ footer .info .wrap{
     box-sizing: border-box;
 }
 
-footer .info .wrap div > p{
+footer .company_info .wrap div > p{
     padding: 0 0 10px 0;
     font-size: 14px;
     font-family: 'Pretendard-Light';
     color: #fff;
 }
 
-footer .info .wrap .footer_sns{
+footer .company_info .wrap .footer_sns{
     display: flex;
     justify-content: flex-end;
     gap:20px;
 }
 
-footer .info .wrap .sns a.img_box{
+footer .company_info .wrap .footer_sns .img_box{
     max-width: 35px;
     width: 100%;
 }
 
-footer .info .wrap .sns a.img_box img{
+footer .company_info .wrap .footer_sns .img_box img{
     width: 100%;
+    cursor: pointer;
 }
 
 footer .footer_logo_box{
@@ -476,4 +489,104 @@ footer .footer_logo_box{
 
 footer .footer_logo_box img{
     width: 100%;
+}
+
+
+@media(max-width:1024px){
+    footer .news_letter .wrap .img_box{
+        max-width: 40px;
+    }
+    
+    footer .news_letter .wrap h3{
+        margin: 0 0 50px 0;
+        font-size: 28px;
+    }
+
+    footer .news_letter .wrap .input > input,
+    footer .news_letter .wrap .input > button{
+        font-size: 16px;
+    }
+
+    footer .service .wrap{
+        padding: 80px 40px;
+        box-sizing: border-box;
+    } 
+
+    footer .company_info .wrap{
+        padding: 80px 40px;
+        box-sizing: border-box;
+    }
+
+    footer .company_info .wrap .footer_sns .img_box{
+        max-width: 25px;
+        width: 100%;
+    }
+}
+
+@media(max-width:768px){
+    footer .news_letter .wrap{
+        max-width: 400px;
+    }
+
+    footer .news_letter .wrap .img_box{
+        margin: 0 auto 30px auto;
+    }
+
+    footer .news_letter .wrap h3{
+        font-size: 24px;
+        line-height: 1.5;
+    }
+
+    footer .news_letter .wrap h3 > br{
+        display: block;
+    }
+
+    footer .news_letter .wrap .input > input,
+    footer .news_letter .wrap .input > button{
+        font-size: 14px;
+    }
+
+    footer .service .wrap{
+        flex-direction: column;
+    }
+
+    footer .service .wrap ul{
+        margin: 0 0 40px 0;
+    }
+
+    footer .service .wrap .footer_menu_category{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    footer .service .wrap > div:not(:last-child) .footer_menu_category{
+        margin: 0 0 15px 0;
+        cursor: pointer;
+    }
+
+    footer .service .wrap .footer_menu_category h5{
+        margin: 0 0 10px 0;
+    }
+    
+    footer .service .wrap .footer_menu_category .img_box{
+        display: block;
+        max-width: 10px;
+    }
+    
+    footer .service .wrap .footer_menu_category .img_box img{
+        width: 100%;
+    }
+
+    footer .service .wrap .footer_menu_category .img_box.flip_vertical{
+        transform: scaleY(-1);
+        transition: 0.5s;
+    }
+
+    footer .company_info .wrap{
+        flex-direction: column;
+        align-items: flex-start;
+        gap:20px;
+    }
 }
