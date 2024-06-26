@@ -1,11 +1,11 @@
 $(window).scroll(function(){
     
-    let header_offset = $('.header_container').offset().top;
+    let header_offset = $('header').offset().top;
     
     if($(window).scrollTop() === 0){
-        $('.header_container').removeClass('fix');
+        $('header').removeClass('fix');
     }else if($(window).scrollTop() >= header_offset){
-        $('.header_container').addClass('fix');
+        $('header').addClass('fix');
     }
     return false;
 })
@@ -40,6 +40,10 @@ $('.category_box').click(function(){
 
 $('.popup_sec').hide();
 
+$('.marquee > .txt_img_box').click(function(){
+    $('body').addClass('stop_scroll');
+})
+
 $('.marquee > .voyou').click(function(){
     $('.voyou_popup').fadeIn(400);
 })
@@ -60,11 +64,13 @@ $('.marquee > .jewelry').click(function(){
 
 $('.popup_sec .close_btn').click(function(){
     $('.popup_sec').fadeOut(400);
+    $('body').removeClass('stop_scroll');
 })
 
 $(document).mouseup(function(e){
     var popUp = $('.popup_sec > .container')
     if(popUp.has(e.target).length === 0 ){
         $('.popup_sec').fadeOut(400); 
+        $('body').removeClass('stop_scroll');
     }
 })

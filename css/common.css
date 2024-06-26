@@ -12,62 +12,111 @@ header{
     padding: 50px 40px 20px 40px;
     box-sizing: border-box;
     z-index: 999;
+    transition: 0.5s;
 }
 
-header nav ul {
+header nav{
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap:30px;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-header nav ul li a{
-    min-width: 20px;
+header nav .blank_box{
+    flex: 1;
 }
 
-header nav ul li a img{
-    width: 100%;
-    opacity: 0.8;
-}
-
-header .logo_box{
-    position:absolute;
-    top:94px;
-    left: 50%;
-    transform: translateX(-50%);
+header nav .logo_box{
+    flex: 2;
     max-width: 930px;
     margin: 0 auto;
     opacity: 0.8;
     transition: 0.5s;
 }
 
-header .logo_box img {
-    min-width: 334px;
+header nav .logo_box img {
+    padding: 90px 0 0 0;
     width: 100%;
 }
 
-.header_container.fix{
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap:30px;
+    flex: 1;
+}
+
+header nav ul li a img{
+    max-width: 25px;
+    width: 100%;
+    opacity: 0.8;
+}
+
+header.fix{
     background-color: #222;
-    transition: 0.5s;
+    
 }
 
-.header_container.fix .logo_box{
-    position:absolute;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: 0.3s;
-}
-
-.header_container.fix .logo_box a{
+header.fix .logo_box{
     max-width: 400px;
     width: 100%;
+}
+
+header.fix .logo_box a{
     margin: 0 auto;
 }
 
-.header_container.fix .logo_box img{
+header.fix .logo_box img{
+    padding: 0;
     width: 100%;
     opacity: 1;
+}
+
+@media(max-width:768px){
+    header{
+        padding: 20px 15px;
+    }
+
+    header nav{
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        gap:20px
+    }
+
+    header nav .blank_box{
+       display: none;
+    }
+
+    header nav .logo_box img{
+        padding: 20px 0 0 0;
+    }
+
+    header nav .logo_box{
+        display: block;
+        max-width: 450px;
+        margin: 0 auto;
+        opacity: 0.8;
+        transition: 0.5s;
+        flex: 1;
+    }
+
+    header nav ul {
+        gap:20px
+    }
+
+    header nav ul li a img{
+        max-width: 20px;
+    }
+
+    header.fix nav{
+        flex-direction: row;
+    }
+
+    header.fix nav .logo_box{
+        max-width: 200px;
+    }
+
 }
 
 
@@ -163,6 +212,15 @@ header .logo_box img {
     color: #fff;
 }
 
+.side_nav_sec .img_nav_box .nav .wrap .nav_box li > .category_box > div{
+    max-width: 14px;
+    width: 100%;
+}
+
+.side_nav_sec .img_nav_box .nav .wrap .nav_box li > .category_box > div > img{
+    width: 100%;
+}
+
 .side_nav_sec .img_nav_box .nav .wrap .nav_box li > .category_box > div.rotate{
     transform: rotate(180deg);
     transition: 0.5s;
@@ -228,6 +286,47 @@ header .logo_box img {
     width: 100%;
 }
 
+
+@media(max-width:768px){
+    .side_nav_sec{
+        padding: 20px 15px;
+    }
+
+    .side_nav_sec .logo_ico_box .logo {
+        max-width: 220px;
+    }
+
+    .side_nav_sec .img_nav_box{
+        flex-direction: column-reverse;
+        gap: 30px;
+        margin: 0 0 60px 0;
+        padding: 0 45px;
+        box-sizing: border-box;
+    }
+
+    .side_nav_sec .img_nav_box .nav .wrap .nav_box{
+        margin: 0 0 30px 0;
+    }
+
+    .side_nav_sec .img_nav_box .collection_img .img_box{
+        max-width: 200px;
+    }
+
+    .side_nav_sec .img_nav_box .nav .wrap .nav_box li > .category_box > a{
+        font-size: 32px;
+    }
+
+    .side_nav_sec .img_nav_box .nav .wrap .nav_box li > .category_box > div{
+        max-width: 12px;
+    }
+
+    .side_nav_sec .img_nav_box .nav .wrap .signin_contact_box li{
+        margin: 0 0 10px 0;
+        font-size: 26px;
+        font-family: "MrEavesXLMod-B";
+        color: #fff;
+    }
+}
 
 
 

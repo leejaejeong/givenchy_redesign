@@ -17,8 +17,9 @@
 
 <body>
     <!-- ! header -->
-    <header class="header_container">
+    <header>
         <nav class="gnb">
+            <div class="blank_box"></div>
             <div class="logo_box">
                 <a href="#">
                     <img src="img/givenchy_logo_text_white.png" alt="지방시">
@@ -228,391 +229,397 @@
         <video src="media/givenchy_video_Givenchy_Plage_2024_pc.mp4" autoplay muted loop playsinline></video>
     </section>
 
-    <!-- ! collection -->
-    <section class="sec collection_sec">
-        <div class="wrap">
-            <div>
-                <div class="img_box">
-                    <img src="img/givenchy_collection_img01.png" alt="봄-여름 2024 여성 캠페인">
-                </div>
-                <a href="#">봄-여름 2024 여성 캠페인 ↗</a>
-            </div>
-            <div>
-                <div class="img_box">
-                    <img src="img/givenchy_collection_img02.png" alt="Fall 2024 컬렉션">
-                </div>
-                <a href="#">Fall 2024 컬렉션↗</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- ! What’s New -->
-    <section class="sec whats_new_sec">
-        <div class="txt_btn_wrap">
-            <div class="tit_box">
-                <h2>What’s New</h2>
-                <p>Lorem ipsum dolor sit amet, <br>
-                    consectetuer adipiscing elit.</p>
-            </div>
-            <div class="btn_box">
-                <div class="swiper-button-next btn_next">
-                    <img src="img/swiper_arrow_next.svg" alt="">
+    <!-- ! content -->
+    <div class="content_container">
+        <!-- ! collection -->
+        <section class="sec collection_sec">
+            <div class="wrap">
+                <div>
+                    <div class="img_box">
+                        <img src="img/givenchy_collection_img01.png" alt="봄-여름 2024 여성 캠페인">
+                    </div>
+                    <a href="#">봄-여름 2024 여성 캠페인 ↗</a>
                 </div>
-                <div class="swiper-button-prev btn_prev">
-                    <img src="img/swiper_arrow_prev.svg" alt="">
+                <div>
+                    <div class="img_box">
+                        <img src="img/givenchy_collection_img02.png" alt="Fall 2024 컬렉션">
+                    </div>
+                    <a href="#">Fall 2024 컬렉션↗</a>
                 </div>
-                <div class="swiper-pagination pagination"></div>
             </div>
-        </div>
-        <!-- Swiper -->
-        <div class="swiper whats_new_swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="#">
+        </section>
+
+        <!-- ! What’s New -->
+        <section class="sec whats_new_sec">
+            <div class="txt_btn_wrap">
+                <div class="tit_box">
+                    <h2>What’s New</h2>
+                    <p>Lorem ipsum dolor sit amet, <br>
+                        consectetuer adipiscing elit.</p>
+                </div>
+                <div class="btn_box">
+                    <div class="swiper-button-next btn_next">
+                        <img src="img/swiper_arrow_next.svg" alt="">
+                    </div>
+                    <div class="swiper-button-prev btn_prev">
+                        <img src="img/swiper_arrow_prev.svg" alt="">
+                    </div>
+                    <div class="swiper-pagination pagination"></div>
+                </div>
+            </div>
+            <!-- Swiper -->
+            <div class="swiper whats_new_swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
                         <img src="img/givenchy_new_img01.png" alt="Voyou 가죽 휴대폰 케이스">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
+                    </div>
+                    <div class="swiper-slide">
                         <img src="img/givenchy_new_img02.png" alt="G-Tote 4G 테리 코튼 미디엄 토트백">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
+                    </div>
+                    <div class="swiper-slide">
                         <img src="img/givenchy_new_img03.png" alt="Voyou 워싱 데님 자수 장식 파우치">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
+                    </div>
+                    <div class="swiper-slide">
                         <img src="img/givenchy_new_img04.png" alt="G-Trek 울 메신저백">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
+                    </div>
+                    <div class="swiper-slide">
                         <img src="img/givenchy_new_img05.png" alt="실크 프린트 박시 셔츠">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
+                    </div>
+                    <div class="swiper-slide">
                         <img src="img/givenchy_new_img06.png" alt="G-Trail 나일론 백">
-                    </a>
+                    </div>
                 </div>
+
             </div>
+        </section>
 
-        </div>
-    </section>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".whats_new_swiper", {
+                slidesPerView: 1.5,
+                spaceBetween: 20,
+                loop: true,
+                speed: 1000,
+                loopFillGroupWithBlank: true,
+                centeredSlides: true,
 
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".whats_new_swiper", {
-            slidesPerView: 2.8,
-            slidesPerGroup: 1,
-            spaceBetween: 50,
-            loop: true,
-            speed: 1000,
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "fraction",
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
 
-            pagination: {
-                el: ".swiper-pagination",
-                type: "fraction",
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2.5,  //브라우저가 768보다 클 때
+                        spaceBetween: 30,
+                        centeredSlides: false,
+                    },
+                    1024: {
+                        slidesPerView: 2.8,  //브라우저가 1024보다 클 때
+                        spaceBetween: 50,
+                        centeredSlides: false,
+                    },
+                },
+            });
+        </script>
 
-    <!-- ! gift -->
-    <section class="sec gift_sec">
-        <div class="tit_box">
-            <h2>Gifts</h2>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-        </div>
-        <div class="marquee_box">
-            <ul class="marquee">
-                <li class="txt_img_box voyou">
-                    <span>Voyou</span>
-                    <div class="img_box">
-                        <img src="img/givenchy_gift_img01.png" alt="부아유">
-                    </div>
-                </li>
-                <li class="txt_img_box shark_lock">
-                    <span>Shark Lock</span>
-                    <div class="img_box">
-                        <img src="img/givenchy_gift_img02.png" alt="샤크락">
-                    </div>
-                </li>
-                <li class="txt_img_box sunglasses">
-                    <span>Sunglasses</span>
-                    <div class="img_box">
-                        <img src="img/givenchy_gift_img03.png" alt="선글라스">
-                    </div>
-                </li>
-                <li class="txt_img_box bags">
-                    <span>Bags</span>
-                    <div class="img_box">
-                        <img src="img/givenchy_gift_img04.png" alt="가방">
-                    </div>
-                </li>
-                <li class="txt_img_box jewelry">
-                    <span>Jewelry</span>
-                    <div class="img_box">
-                        <img src="img/givenchy_gift_img05.png" alt="주얼리">
-                    </div>
-                </li>
-            </ul>
-            <ul class="marquee">
-                <li class="txt_img_box voyou">
-                    <span>Voyou</span>
-                    <div class="img_box">
-                        <img src="img/givenchy_gift_img01.png" alt="부아유">
-                    </div>
-                </li>
-                <li class="txt_img_box shark_lock">
-                    <span>Shark Lock</span>
-                    <div class="img_box">
-                        <img src="img/givenchy_gift_img02.png" alt="샤크락">
-                    </div>
-                </li>
-                <li class="txt_img_box sunglasses">
-                    <span>Sunglasses</span>
-                    <div class="img_box">
-                        <img src="img/givenchy_gift_img03.png" alt="선글라스">
-                    </div>
-                </li>
-                <li class="txt_img_box bags">
-                    <span>Bags</span>
-                    <div class="img_box">
-                        <img src="img/givenchy_gift_img04.png" alt="가방">
-                    </div>
-                </li>
-                <li class="txt_img_box jewelry">
-                    <span>Jewelry</span>
-                    <div class="img_box">
-                        <img src="img/givenchy_gift_img05.png" alt="주얼리">
-                    </div>
-                </li>
-            </ul>
-            <ul class="marquee">
-                <li class="txt_img_box voyou">
-                    <span>Voyou</span>
-                    <div class="img_box">
-                        <img src="img/givenchy_gift_img01.png" alt="부아유">
-                    </div>
-                </li>
-                <li class="txt_img_box shark_lock">
-                    <span>Shark Lock</span>
-                    <div class="img_box">
-                        <img src="img/givenchy_gift_img02.png" alt="샤크락">
-                    </div>
-                </li>
-                <li class="txt_img_box sunglasses">
-                    <span>Sunglasses</span>
-                    <div class="img_box">
-                        <img src="img/givenchy_gift_img03.png" alt="선글라스">
-                    </div>
-                </li>
-                <li class="txt_img_box bags">
-                    <span>Bags</span>
-                    <div class="img_box">
-                        <img src="img/givenchy_gift_img04.png" alt="가방">
-                    </div>
-                </li>
-                <li class="txt_img_box jewelry">
-                    <span>Jewelry</span>
-                    <div class="img_box">
-                        <img src="img/givenchy_gift_img05.png" alt="주얼리">
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
+        <!-- ! gift -->
+        <section class="sec gift_sec">
+            <div class="tit_box">
+                <h2>Gifts</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            </div>
+            <div class="marquee_box">
+                <ul class="marquee">
+                    <li class="txt_img_box voyou">
+                        <span>Voyou</span>
+                        <div class="img_box">
+                            <img src="img/givenchy_gift_img01.png" alt="부아유">
+                        </div>
+                    </li>
+                    <li class="txt_img_box shark_lock">
+                        <span>Shark Lock</span>
+                        <div class="img_box">
+                            <img src="img/givenchy_gift_img02.png" alt="샤크락">
+                        </div>
+                    </li>
+                    <li class="txt_img_box sunglasses">
+                        <span>Sunglasses</span>
+                        <div class="img_box">
+                            <img src="img/givenchy_gift_img03.png" alt="선글라스">
+                        </div>
+                    </li>
+                    <li class="txt_img_box bags">
+                        <span>Bags</span>
+                        <div class="img_box">
+                            <img src="img/givenchy_gift_img04.png" alt="가방">
+                        </div>
+                    </li>
+                    <li class="txt_img_box jewelry">
+                        <span>Jewelry</span>
+                        <div class="img_box">
+                            <img src="img/givenchy_gift_img05.png" alt="주얼리">
+                        </div>
+                    </li>
+                </ul>
+                <ul class="marquee">
+                    <li class="txt_img_box voyou">
+                        <span>Voyou</span>
+                        <div class="img_box">
+                            <img src="img/givenchy_gift_img01.png" alt="부아유">
+                        </div>
+                    </li>
+                    <li class="txt_img_box shark_lock">
+                        <span>Shark Lock</span>
+                        <div class="img_box">
+                            <img src="img/givenchy_gift_img02.png" alt="샤크락">
+                        </div>
+                    </li>
+                    <li class="txt_img_box sunglasses">
+                        <span>Sunglasses</span>
+                        <div class="img_box">
+                            <img src="img/givenchy_gift_img03.png" alt="선글라스">
+                        </div>
+                    </li>
+                    <li class="txt_img_box bags">
+                        <span>Bags</span>
+                        <div class="img_box">
+                            <img src="img/givenchy_gift_img04.png" alt="가방">
+                        </div>
+                    </li>
+                    <li class="txt_img_box jewelry">
+                        <span>Jewelry</span>
+                        <div class="img_box">
+                            <img src="img/givenchy_gift_img05.png" alt="주얼리">
+                        </div>
+                    </li>
+                </ul>
+                <ul class="marquee">
+                    <li class="txt_img_box voyou">
+                        <span>Voyou</span>
+                        <div class="img_box">
+                            <img src="img/givenchy_gift_img01.png" alt="부아유">
+                        </div>
+                    </li>
+                    <li class="txt_img_box shark_lock">
+                        <span>Shark Lock</span>
+                        <div class="img_box">
+                            <img src="img/givenchy_gift_img02.png" alt="샤크락">
+                        </div>
+                    </li>
+                    <li class="txt_img_box sunglasses">
+                        <span>Sunglasses</span>
+                        <div class="img_box">
+                            <img src="img/givenchy_gift_img03.png" alt="선글라스">
+                        </div>
+                    </li>
+                    <li class="txt_img_box bags">
+                        <span>Bags</span>
+                        <div class="img_box">
+                            <img src="img/givenchy_gift_img04.png" alt="가방">
+                        </div>
+                    </li>
+                    <li class="txt_img_box jewelry">
+                        <span>Jewelry</span>
+                        <div class="img_box">
+                            <img src="img/givenchy_gift_img05.png" alt="주얼리">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
+        <!-- ! product -->
+        <section class="sec product">
+            <div class="wrap">
+                <ul class="bags_wrap">
+                    <li class="tit_box">
+                        <div class="txt_box">
+                            <h2>Bags<br>
+                                Collection</h2>
+                            <a href="#">View All Bags ↗</a>
+                        </div>
+                        <div class="pattern">
+                            <img src="img/givenchy_pattern.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/givenchy_bags_img01.png" alt="Antigona Cube 가죽 미니 백">
+                    </li>
+                    <li>
+                        <img src="img/givenchy_bags_img02.png" alt="복스 가죽 미니 안티고나 락 백">
+                    </li>
+                    <li>
+                        <img src="img/givenchy_bags_img03.png" alt="플로럴 패턴 가죽 미니 안티고나 백">
+                    </li>
+                </ul>
+                <ul class="sunglasses_wrap">
+                    <li>
+                        <img src="img/givenchy_sunglasses_img01.png" alt="Giv Cut 메탈 유니섹스 선글라스">
+                    </li>
+                    <li>
+                        <img src="img/givenchy_sunglasses_img02.png" alt="4G 아세테이트 유니섹스 선글라스 다크 하바나">
+                    </li>
+                    <li class="tit_box">
+                        <div class="txt_box">
+                            <h2>Sunglasses<br>
+                                Collection</h2>
+                            <a href="#">View All Sunglasses ↗</a>
+                        </div>
+                        <div class="pattern">
+                            <img src="img/givenchy_pattern.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/givenchy_sunglasses_img03.png" alt="4G 아세테이트 유니섹스 선글라스 블랙">
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
 
     <!-- ! gift pop up -->
-    <section class="sec popup_sec voyou_popup">
-        <div class="container">
-            <div class="close_btn">
-                <img src="img/givenchy_popup_ico_x.png" alt="닫기">
-            </div>
-            <div class="img_txt_box">
-                <div class="img_box">
-                    <img src="img/givenchy_popup_img01.png" alt="부아유">
+    <div class="gift_popup">
+        <section class="sec popup_sec voyou_popup">
+            <div class="container">
+                <div class="close_btn">
+                    <img src="img/givenchy_popup_ico_x.png" alt="닫기">
                 </div>
-                <div class="txt_btn_box">
-                    <div class="txt_box">
-                        <h3>부아유( Voyou )</h3>
-                        <p>Givenchy의 Voyou Bag는 세련된 디자인과 실용성을 겸비한 아이코닉한 핸드백으로,
-                            도시적이고 모던한 스타일을 연출합니다. 다양한 색상과 고급 소재로 제공되며,
-                            넉넉한 수납 공간과 탈부착 가능한 스트랩을 통해 다재다능하게 활용할 수 있습니다.
-                            고급스러운 지방시 로고 장식과 견고한 마감 처리는 이 가방의 품질을 더욱 돋보이게 합니다.
-                            캐주얼 룩, 오피스 룩, 이브닝 룩 등 다양한 스타일에 어울리는 Voyou Bag로
-                            자신만의 패션 아이덴티티를 표현해보세요.
-                        </p>
+                <div class="img_txt_box">
+                    <div class="img_box">
+                        <img src="img/givenchy_popup_img01.png" alt="부아유">
                     </div>
-                    <div class="btn_box">
-                        <button>More ↗</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="sec popup_sec shark_lock_popup">
-        <div class="container">
-            <div class="close_btn">
-                <img src="img/givenchy_popup_ico_x.png" alt="닫기">
-            </div>
-            <div class="img_txt_box">
-                <div class="img_box">
-                    <img src="img/givenchy_popup_img02.png" alt="샤크락">
-                </div>
-                <div class="txt_btn_box">
-                    <div class="txt_box">
-                        <h3>샤크락( Shark Lock )</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Aperiam beatae expedita aliquam, ullam nemo sapiente amet aliquid ab facilis
-                            Aperiam beatae expedita aliquam, ullam nemo sapiente amet aliquid ab facilis
-                            ipsum aut esse suscipit necessitatibus? Ipsum ipsa ab omnis deserunt nostrum.
-                        </p>
-                    </div>
-                    <div class="btn_box">
-                        <button>More ↗</button>
+                    <div class="txt_btn_box">
+                        <div class="txt_box">
+                            <h3>부아유( Voyou )</h3>
+                            <p>Givenchy의 Voyou Bag는 세련된 디자인과 실용성을 겸비한 아이코닉한 핸드백으로,
+                                도시적이고 모던한 스타일을 연출합니다. 다양한 색상과 고급 소재로 제공되며,
+                                넉넉한 수납 공간과 탈부착 가능한 스트랩을 통해 다재다능하게 활용할 수 있습니다.
+                                고급스러운 지방시 로고 장식과 견고한 마감 처리는 이 가방의 품질을 더욱 돋보이게 합니다.
+                                캐주얼 룩, 오피스 룩, 이브닝 룩 등 다양한 스타일에 어울리는 Voyou Bag로
+                                자신만의 패션 아이덴티티를 표현해보세요.
+                            </p>
+                        </div>
+                        <div class="btn_box">
+                            <button>More ↗</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="sec popup_sec sunglasses_popup">
-        <div class="container">
-            <div class="close_btn">
-                <img src="img/givenchy_popup_ico_x.png" alt="닫기">
-            </div>
-            <div class="img_txt_box">
-                <div class="img_box">
-                    <img src="img/givenchy_popup_img03.png" alt="선글라스">
+        </section>
+        <section class="sec popup_sec shark_lock_popup">
+            <div class="container">
+                <div class="close_btn">
+                    <img src="img/givenchy_popup_ico_x.png" alt="닫기">
                 </div>
-                <div class="txt_btn_box">
-                    <div class="txt_box">
-                        <h3>선글라스( Sunglasses )</h3>
-                        <p>Givenchy의 선글라스는 독창적인 디자인과 고품질 소재로 유명한 패션 아이템입니다.
-                            트렌디한 프레임과 세련된 디테일이 특징이며, 견고한 아세테이트와 메탈 소재로 제작되어 높은 내구성을 자랑합니다.
-                            자외선 차단 기능이 뛰어난 렌즈는 눈 건강을 보호하면서도 선명한 시야를 제공합니다.
-                            유니섹스 디자인과 다양한 사이즈 옵션으로 모든 사람에게 어울리는 스타일을 제공하며,
-                            캐주얼 룩, 오피스 룩, 휴양지 룩 등 다양한 스타일에 매치할 수 있습니다.
-                            Givenchy 선글라스로 매일의 룩을 더욱 돋보이게 만들어보세요.
-                        </p>
+                <div class="img_txt_box">
+                    <div class="img_box">
+                        <img src="img/givenchy_popup_img02.png" alt="샤크락">
                     </div>
-                    <div class="btn_box">
-                        <button>More ↗</button>
+                    <div class="txt_btn_box">
+                        <div class="txt_box">
+                            <h3>샤크락( Shark Lock )</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Aperiam beatae expedita aliquam, ullam nemo sapiente amet aliquid ab facilis
+                                Aperiam beatae expedita aliquam, ullam nemo sapiente amet aliquid ab facilis
+                                ipsum aut esse suscipit necessitatibus? Ipsum ipsa ab omnis deserunt nostrum.
+                            </p>
+                        </div>
+                        <div class="btn_box">
+                            <button>More ↗</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="sec popup_sec bags_popup">
-        <div class="container">
-            <div class="close_btn">
-                <img src="img/givenchy_popup_ico_x.png" alt="닫기">
-            </div>
-            <div class="img_txt_box">
-                <div class="img_box">
-                    <img src="img/givenchy_popup_img04.png" alt="가방">
+        </section>
+        <section class="sec popup_sec sunglasses_popup">
+            <div class="container">
+                <div class="close_btn">
+                    <img src="img/givenchy_popup_ico_x.png" alt="닫기">
                 </div>
-                <div class="txt_btn_box">
-                    <div class="txt_box">
-                        <h3>가방( Bags )</h3>
-                        <p>Givenchy의 선글라스는 독창적인 디자인과 고품질 소재로 유명한 패션 아이템입니다.
-                            트렌디한 프레임과 세련된 디테일이 특징이며, 견고한 아세테이트와 메탈 소재로 제작되어 높은 내구성을 자랑합니다.
-                            자외선 차단 기능이 뛰어난 렌즈는 눈 건강을 보호하면서도 선명한 시야를 제공합니다.
-                            유니섹스 디자인과 다양한 사이즈 옵션으로 모든 사람에게 어울리는 스타일을 제공하며,
-                            캐주얼 룩, 오피스 룩, 휴양지 룩 등 다양한 스타일에 매치할 수 있습니다.
-                            Givenchy 선글라스로 매일의 룩을 더욱 돋보이게 만들어보세요.
-                        </p>
+                <div class="img_txt_box">
+                    <div class="img_box">
+                        <img src="img/givenchy_popup_img03.png" alt="선글라스">
                     </div>
-                    <div class="btn_box">
-                        <button>More ↗</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="sec popup_sec jewelry_popup">
-        <div class="container">
-            <div class="close_btn">
-                <img src="img/givenchy_popup_ico_x.png" alt="닫기">
-            </div>
-            <div class="img_txt_box">
-                <div class="img_box">
-                    <img src="img/givenchy_popup_img05.png" alt="액세서리">
-                </div>
-                <div class="txt_btn_box">
-                    <div class="txt_box">
-                        <h3>액세서리( Jewelry )</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Aperiam beatae expedita aliquam, ullam nemo sapiente amet aliquid ab facilis
-                            Aperiam beatae expedita aliquam, ullam nemo sapiente amet aliquid ab facilis
-                            ipsum aut esse suscipit necessitatibus? Ipsum ipsa ab omnis deserunt nostrum.
-                        </p>
-                    </div>
-                    <div class="btn_box">
-                        <button>More ↗</button>
+                    <div class="txt_btn_box">
+                        <div class="txt_box">
+                            <h3>선글라스( Sunglasses )</h3>
+                            <p>Givenchy의 선글라스는 독창적인 디자인과 고품질 소재로 유명한 패션 아이템입니다.
+                                트렌디한 프레임과 세련된 디테일이 특징이며, 견고한 아세테이트와 메탈 소재로 제작되어 높은 내구성을 자랑합니다.
+                                자외선 차단 기능이 뛰어난 렌즈는 눈 건강을 보호하면서도 선명한 시야를 제공합니다.
+                                유니섹스 디자인과 다양한 사이즈 옵션으로 모든 사람에게 어울리는 스타일을 제공하며,
+                                캐주얼 룩, 오피스 룩, 휴양지 룩 등 다양한 스타일에 매치할 수 있습니다.
+                                Givenchy 선글라스로 매일의 룩을 더욱 돋보이게 만들어보세요.
+                            </p>
+                        </div>
+                        <div class="btn_box">
+                            <button>More ↗</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- ! product -->
-    <section class="sec product">
-        <div class="wrap">
-            <ul class="bags_wrap">
-                <li class="tit_box">
-                    <div class="txt_box">
-                        <h2>Bags<br>
-                            Collection</h2>
-                        <a href="#">View All Bags ↗</a>
+        </section>
+        <section class="sec popup_sec bags_popup">
+            <div class="container">
+                <div class="close_btn">
+                    <img src="img/givenchy_popup_ico_x.png" alt="닫기">
+                </div>
+                <div class="img_txt_box">
+                    <div class="img_box">
+                        <img src="img/givenchy_popup_img04.png" alt="가방">
                     </div>
-                    <div class="pattern">
-                        <img src="img/givenchy_pattern.png" alt="">
+                    <div class="txt_btn_box">
+                        <div class="txt_box">
+                            <h3>가방( Bags )</h3>
+                            <p>Givenchy의 선글라스는 독창적인 디자인과 고품질 소재로 유명한 패션 아이템입니다.
+                                트렌디한 프레임과 세련된 디테일이 특징이며, 견고한 아세테이트와 메탈 소재로 제작되어 높은 내구성을 자랑합니다.
+                                자외선 차단 기능이 뛰어난 렌즈는 눈 건강을 보호하면서도 선명한 시야를 제공합니다.
+                                유니섹스 디자인과 다양한 사이즈 옵션으로 모든 사람에게 어울리는 스타일을 제공하며,
+                                캐주얼 룩, 오피스 룩, 휴양지 룩 등 다양한 스타일에 매치할 수 있습니다.
+                                Givenchy 선글라스로 매일의 룩을 더욱 돋보이게 만들어보세요.
+                            </p>
+                        </div>
+                        <div class="btn_box">
+                            <button>More ↗</button>
+                        </div>
                     </div>
-                </li>
-                <li>
-                    <img src="img/givenchy_bags_img01.png" alt="Antigona Cube 가죽 미니 백">
-                </li>
-                <li>
-                    <img src="img/givenchy_bags_img02.png" alt="복스 가죽 미니 안티고나 락 백">
-                </li>
-                <li>
-                    <img src="img/givenchy_bags_img03.png" alt="플로럴 패턴 가죽 미니 안티고나 백">
-                </li>
-            </ul>
-            <ul class="sunglasses_wrap">
-                <li>
-                    <img src="img/givenchy_sunglasses_img01.png" alt="Giv Cut 메탈 유니섹스 선글라스">
-                </li>
-                <li>
-                    <img src="img/givenchy_sunglasses_img02.png" alt="4G 아세테이트 유니섹스 선글라스 다크 하바나">
-                </li>
-                <li class="tit_box">
-                    <div class="txt_box">
-                        <h2>Sunglasses<br>
-                            Collection</h2>
-                        <a href="#">View All Sunglasses ↗</a>
+                </div>
+            </div>
+        </section>
+        <section class="sec popup_sec jewelry_popup">
+            <div class="container">
+                <div class="close_btn">
+                    <img src="img/givenchy_popup_ico_x.png" alt="닫기">
+                </div>
+                <div class="img_txt_box">
+                    <div class="img_box">
+                        <img src="img/givenchy_popup_img05.png" alt="액세서리">
                     </div>
-                    <div class="pattern">
-                        <img src="img/givenchy_pattern.png" alt="">
+                    <div class="txt_btn_box">
+                        <div class="txt_box">
+                            <h3>액세서리( Jewelry )</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Aperiam beatae expedita aliquam, ullam nemo sapiente amet aliquid ab facilis
+                                Aperiam beatae expedita aliquam, ullam nemo sapiente amet aliquid ab facilis
+                                ipsum aut esse suscipit necessitatibus? Ipsum ipsa ab omnis deserunt nostrum.
+                            </p>
+                        </div>
+                        <div class="btn_box">
+                            <button>More ↗</button>
+                        </div>
                     </div>
-                </li>
-                <li>
-                    <img src="img/givenchy_sunglasses_img03.png" alt="4G 아세테이트 유니섹스 선글라스 블랙">
-                </li>
-            </ul>
-        </div>
-    </section>
-
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- ! footer -->
     <footer>
