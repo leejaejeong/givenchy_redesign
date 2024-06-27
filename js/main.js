@@ -24,11 +24,13 @@ $('.menu_btn').click(function(){
 $('.side_nav_sec .close_btn').click(function(){
     $('.side_nav_sec').fadeOut(400);
     $('body').removeClass('stop_scroll');
+    $('.sub_category').slideUp();
 })
 
 $('.category_box').click(function(){
     $('.sub_category').slideUp();
     $('.category_box > div').removeClass('flip_vertical');
+    $('body').toggleClass('stop_scroll');
     if($(this).siblings().hasClass('active')){
         $(this).siblings().removeClass('active');
         $(this).children('div').removeClass('flip_vertical');
@@ -40,7 +42,7 @@ $('.category_box').click(function(){
 })
 
 
-// ! pop up
+// ! gift pop up
 $('.popup_sec').hide();
 
 $('.marquee > .txt_img_box').click(function(){
