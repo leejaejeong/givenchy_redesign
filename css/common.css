@@ -395,6 +395,10 @@ footer .news_letter .wrap .input > button{
     cursor: pointer;
 }
 
+footer .service_mobile{
+    display: none;
+}
+
 footer .service{
     font-size: 14px;
     font-weight: 100;
@@ -431,6 +435,10 @@ footer .service .wrap > div > ul li{
     color: #fff;
 }
 
+footer .service .wrap .language_change > div{
+    margin: 0 0 10px 0;
+}
+
 footer .service .wrap .language_change select{
     width: 100%;
     padding: 0 0 10px 0;
@@ -438,6 +446,7 @@ footer .service .wrap .language_change select{
     color: #fff;
     cursor: pointer;
 }
+
 
 footer .service .wrap .language_change select option{
     background-color: #222;
@@ -519,6 +528,31 @@ footer .footer_logo_box img{
 }
 
 @media(max-width:768px){
+    footer .service_mobile{
+        display: block;
+    }
+
+    footer .service_pc{
+        display: none;
+    }
+
+    footer .service_mobile > .wrap > div > ul{
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        padding: 0;
+        margin: 0;
+        transition: 0.3s;
+    }
+
+    footer .service_mobile > .wrap > div > ul.active {
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+        margin: 0 0 20px 0;
+        padding: 20px 0;
+    }
+
     footer .news_letter .wrap{
         max-width: 400px;
     }
