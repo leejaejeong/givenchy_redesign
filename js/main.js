@@ -4,7 +4,7 @@ $(window).scroll(function(){
     
     let header_offset = $('header').offset().top;
     
-    if($(window).scrollTop() === 0){
+    if($(window).scrollTop() === 0){ //scrollTop() : 수직 스크롤 바 위치
         $('header').removeClass('fix');
     }else if($(window).scrollTop() >= header_offset){
         $('header').addClass('fix');
@@ -13,15 +13,15 @@ $(window).scroll(function(){
 
 
 // ! side menu
-$('.side_nav_sec').hide();
+$('.side_nav').hide();
 
 $('.menu_btn').click(function(){
-    $('.side_nav_sec').fadeIn(400);
+    $('.side_nav').fadeIn(400);
     $('body').addClass('stop_scroll');
 })
 
-$('.side_nav_sec .close_btn').click(function(){
-    $('.side_nav_sec').fadeOut(400);
+$('.side_nav .close_btn').click(function(){
+    $('.side_nav').fadeOut(400);
     $('body').removeClass('stop_scroll');
     $('.sub_category').slideUp();
 })
@@ -64,7 +64,7 @@ $('.popup_sec .close_btn').click(function(){
     $('.popup_sec').fadeOut(400);
 })
 
-$(document).mouseup(function(e){
+$(document).mouseup(function(e){ //사용자가 해당 element에서 눌렀던 마우스 버튼을 떼었을 때 발생
     var popUp = $('.popup_sec > .container')
     if(popUp.has(e.target).length === 0 ){
         $('.popup_sec').fadeOut(400); 
